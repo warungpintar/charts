@@ -1,0 +1,19 @@
+image:
+  repository: nats-streaming
+  pullPolicy: IfNotPresent
+  tag: 0.17.0-linux
+
+metadata:
+  name: nats-streaming
+  namespace: default
+  squad: default
+
+metrics:
+  port: 7777
+
+monitoring:
+  port: 8223
+  url: http://localhost:8223
+
+nats:
+  port: 4223
