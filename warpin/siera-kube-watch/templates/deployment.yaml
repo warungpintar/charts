@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.metadata.name }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.metadata.name }}
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.metadata.name }}
+    spec:
+      serviceAccountName: {{ .Values.metadata.name }}
+      containers:
+        - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          name: {{ .Values.metadata.name }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          volumeMounts:
+            - name: {{ .Values.metadata.name }}-config
+              mountPath: /usr/src/app/etc/siera-kube-watch
+
+      imagePullSecrets:
+        - name: gcr-json-key
+      volumes:
+        - name: {{ .Values.metadata.name }}-config
+          secret:
+            secretName: {{ .Values.metadata.name }}-config
+

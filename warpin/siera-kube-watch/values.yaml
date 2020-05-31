@@ -1,0 +1,16 @@
+metadata:
+  name: siera-kube-watch
+
+image:
+  repository: warungpintar/siera-kube-watch
+  pullPolicy: IfNotPresent
+  tag: v1.0.0
+
+config:
+  webhook:
+    enabled: true
+    url: http://siera.hack-tribe.svc.cluster.local:2112/workplace?thread=t_3249032331815485
+
+  slack:
+    enabled: false
+    url: http://slackurl
