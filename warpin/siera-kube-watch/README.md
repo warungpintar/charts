@@ -2,6 +2,22 @@
 
 siera kube watch is a Kubernetes events watcher that currently publishes notification to Webhook and Slack. Run it in your k8s cluster, and you will get event notifications.
 
+## TL;DR
+
+```
+helm repo add warpincharts  https://warungpintar.github.io/charts
+helm search repo warpincharts
+helm install siera-kube-watch  -n [your namespace]  warpincharts/siera-kube-watch
+or (webhook)
+helm install siera-kube-watch -n [your namespace]  warpincharts/siera-kube-watch \
+  --set=config.webhook.enabled="true",config.webhook.url="http://webhookurl"
+or (slack)
+helm install siera-kube-watch -n [your namespace]  warpincharts/siera-kube-watch \
+  --set=config.slack.enabled="true",config.webhook.url="http://slackurl"  
+or (with value)
+helm install siera-kube-watch -n [your namespace] -f values.yaml warpincharts/siera-kube-watch \
+
+```
 
 ## Parameters
 
