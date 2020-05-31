@@ -1,4 +1,4 @@
-#SIERA KUBE WATCH
+## SIERA KUBE WATCH
 
 siera kube watch is a Kubernetes events watcher that currently publishes notification to Webhook and Slack. Run it in your k8s cluster, and you will get event notifications.
 
