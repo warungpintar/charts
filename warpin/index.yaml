@@ -1,0 +1,25 @@
+apiVersion: v1
+entries:
+  nats-streaming:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-05-31T18:09:17.784679+07:00"
+    description: A Helm chart for nats streaming
+    digest: c0337041e7408af2fcdd8810ed6a82b01de3a49fb77dbcff6a32f834600c92b5
+    name: nats-streaming
+    type: application
+    urls:
+    - https://github.com/warungpintar/charts/releases/download/nats-streaming-0.1.0/nats-streaming-0.1.0.tgz
+    version: 0.1.0
+  siera-kube-watch:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2020-05-31T18:09:18.113624+07:00"
+    description: A Helm chart for watch kubernetes events
+    digest: d35fbd633939d1d7c10808917abf79bd5a6c6d5a384e918b211cac23c38e95ff
+    name: siera-kube-watch
+    type: application
+    urls:
+    - https://github.com/warungpintar/charts/releases/download/siera-kube-watch-1.0.0/siera-kube-watch-1.0.0.tgz
+    version: 1.0.0
+generated: "2020-05-31T18:09:17.346662+07:00"
