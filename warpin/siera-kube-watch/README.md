@@ -18,6 +18,8 @@ or (with value)
 helm install siera-kube-watch -n [your namespace] -f values.yaml warpincharts/siera-kube-watch \
 
 ```
+## Result
+![GitHub Logo](example-webhook.png)
 
 ## Parameters
 
