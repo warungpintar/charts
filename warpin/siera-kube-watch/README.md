@@ -9,19 +9,21 @@ Supported webhooks:
 
 ## TL;DR
 
+add repository 
 ```
 helm repo add warpincharts  https://warungpintar.github.io/charts
 helm search repo warpincharts
-helm install siera-kube-watch  -n [your namespace]  warpincharts/siera-kube-watch
-or (webhook)
+```
+
+install with webhook
+```
 helm install siera-kube-watch -n [your namespace]  warpincharts/siera-kube-watch \
   --set=config.webhook.enabled="true",config.webhook.url="http://webhookurl"
-or (slack)
+```
+install with slack
+```
 helm install siera-kube-watch -n [your namespace]  warpincharts/siera-kube-watch \
-  --set=config.slack.enabled="true",config.webhook.url="http://slackurl"  
-or (with value)
-helm install siera-kube-watch -n [your namespace] -f values.yaml warpincharts/siera-kube-watch \
-
+  --set=config.slack.enabled="true",config.webhook.url="http://slackurl" 
 ```
 
 ## Result
@@ -43,3 +45,8 @@ The following table lists the configurable parameters of the siera kube watch ch
 | `config.slack.url`                       | url of slack                                                                                                                | ``                                                      |
 
 
+Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart. For example,
+ 
+```
+helm install siera-kube-watch -n [your namespace] -f values.yaml warpincharts/siera-kube-watch 
+```
