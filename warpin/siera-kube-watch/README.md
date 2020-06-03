@@ -23,26 +23,35 @@ helm install siera-kube-watch -n [your namespace]  warpincharts/siera-kube-watch
 install with slack
 ```
 helm install siera-kube-watch -n [your namespace]  warpincharts/siera-kube-watch \
-  --set=config.slack.enabled="true",config.webhook.url="http://slackurl" 
+  --set=config.slack.enabled="true",config.webhook.url="https://hooks.slack.com/services/TOKEN" 
 ```
 
-## Result
-![GitHub Logo](example-webhook.png)
+install with telegram
+```
+helm install siera-kube-watch -n [your namespace]  warpincharts/siera-kube-watch \
+  --set=config.slack.enabled="true",config.webhook.url="https://api.telegram.org/botTOKEN/sendMessage?chat_id=-XX" 
+```
 
 ## Parameters
 
 The following table lists the configurable parameters of the siera kube watch chart and their default values.
 
-| Parameter                                | Description                                                                                                                 | Default                                                 |
-|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
-| `metadata.name       `                   | Global name                                                                                                                 | `siera-kube-watch`                                      |
-| `image.repository`                       | Image repository                                                                                                            | `warungpintar/siera-kube-watch`                         |
-| `image.tag`                              | Image tag                                                                                                                   | `v1.0.0`                                                |
-| `image.pullPolicy`                       | Image pull policy                                                                                                           | `IfNotPresent`                                          |
-| `config.webhook.enabled`                 | boolean to enable or disable webhook                                                                                        | `false`                                                 |
-| `config.webhook.url`                     | url of webhook                                                                                                              | ``                                                      |
-| `config.slack.enabled`                   | boolean to enable or disable slack                                                                                          | `false`                                                 |
-| `config.slack.url`                       | url of slack                                                                                                                | ``                                                      |
+| Parameter                                | Description                                                                                                                 | Default                                                    |
+|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
+| `metadata.name       `                   | Global name                                                                                                                 | `siera-kube-watch`                                         |
+| `image.repository`                       | Image repository                                                                                                            | `warungpintar/siera-kube-watch`                            |
+| `image.tag`                              | Image tag                                                                                                                   | `v1.0.0`                                                   |
+| `image.pullPolicy`                       | Image pull policy                                                                                                           | `IfNotPresent`                                             |
+| `config.webhook.enabled`                 | boolean to enable or disable webhook                                                                                        | `false`                                                    |
+| `config.webhook.url`                     | url of webhook                                                                                                              | ``                                                         |
+| `config.slack.enabled`                   | boolean to enable or disable slack                                                                                          | `false`                                                    |
+| `config.slack.url`                       | url of slack                                                                                                                | `https://hooks.slack.com/services/TOKEN`                   |
+| `config.telegram.enabled`                | boolean to enable or disable slack                                                                                          | `false`                                                    |
+| `config.telegram.token`                  | url of telegram api                                                                                                         | `https://api.telegram.org/botTOKEN/sendMessage?chat_id=-XX`|                                                      
+| `config.telegram.chat.id`                | url of telegram api                                                                                                         | `https://api.telegram.org/botTOKEN/sendMessage?chat_id=-XX`|                                                      
+| `excluded.reasons`                       | In case you want to filter your event stream from specific reason, you can add that reason to excluded.reasons.             | `[]`                                                       |                                                      
+| `include.reasons`                 | In case you want to add normal reason to your event stream from specific reason.                                            | `["ScalingReplicaSet", "Started", "Killing"]`              |                                                      
+
 
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart. For example,
@@ -50,3 +59,14 @@ Alternatively, a YAML file that specifies the values for the above parameters ca
 ```
 helm install siera-kube-watch -n [your namespace] -f values.yaml warpincharts/siera-kube-watch 
 ```
+
+## Result webhook
+![GitHub Logo](result-webhook.png)
+
+## Result slack
+![GitHub Logo](result-slack.png)
+
+## Result telegram
+![GitHub Logo](result-telegram.png)
+
+docker image size  35.2MB

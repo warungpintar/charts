@@ -16,3 +16,13 @@ stringData:
       enabled: {{ .Values.config.slack.enabled }}
       url: {{ .Values.config.slack.url }}
 
+    telegram:
+      enabled: {{ .Values.config.telegram.enabled }}
+      token: {{ .Values.config.telegram.url }}
+      chat.id: {{ .Values.config.chat.id }}
+
+    excluded.reasons: []
+
+    included.reasons: ["ScalingReplicaSet", "Started", "Killing"]
+
+
