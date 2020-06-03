@@ -3,7 +3,7 @@ metadata:
 
 image:
   repository: warungpintar/siera-kube-watch
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   tag: v1.0.0
 
 config:
