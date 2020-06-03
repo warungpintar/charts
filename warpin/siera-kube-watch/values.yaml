@@ -14,3 +14,16 @@ config:
   slack:
     enabled: false
     url: http://slackurl
+
+  telegram:
+    enabled: false
+    token: http://slackurl
+    chatID: -1234567890123
+
+
+  excluded:
+    reasons: '[]'
+  included:
+    reasons: '["ScalingReplicaSet", "Started", "Killing"]'
+
+

@@ -19,10 +19,9 @@ stringData:
     telegram:
       enabled: {{ .Values.config.telegram.enabled }}
       token: {{ .Values.config.telegram.url }}
-      chat.id: {{ .Values.config.chat.id }}
+      chatID: {{ .Values.config.telegram.chatID }}
 
-    excluded.reasons: []
+    excluded.reasons: {{ .Values.config.excluded.reasons   }}
 
-    included.reasons: ["ScalingReplicaSet", "Started", "Killing"]
-
+    included.reasons: {{ .Values.config.included.reasons }}
 
