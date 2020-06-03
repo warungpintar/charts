@@ -29,7 +29,7 @@ helm install siera-kube-watch -n [your namespace]  warpincharts/siera-kube-watch
 install with telegram
 ```
 helm install siera-kube-watch -n [your namespace]  warpincharts/siera-kube-watch \
-  --set=config.slack.enabled="true",config.webhook.url="https://api.telegram.org/botTOKEN/sendMessage?chat_id=-XX" 
+  --set=config.telegram.enabled="true", config.telegram.token="123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11",  config.telegram.chat.id="-1234567890123"
 ```
 
 ## Parameters
