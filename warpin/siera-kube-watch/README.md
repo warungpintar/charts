@@ -4,7 +4,7 @@
 
 Supported webhooks:
 - slack
-- workplace chat
+- telegram
 - webhook
 
 ## TL;DR
