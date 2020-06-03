@@ -13,13 +13,13 @@ entries:
     version: 0.1.0
   siera-kube-watch:
   - apiVersion: v2
-    appVersion: 1.0.2
-    created: "2020-06-03T14:41:23.156452+07:00"
+    appVersion: 1.0.3
+    created: "2020-06-03T14:53:56.323311+07:00"
     description: A Helm chart for watch kubernetes events
-    digest: c1e68a3e9f4ac0914e79c3a8890e9fb8fde591ef04c2e1714cf6bfa0b7eaa8c7
+    digest: 73eda7a7735cf1d4feab19cef3a04136b266a22ea9f57de30dfb07e987af1175
     name: siera-kube-watch
     type: application
     urls:
-    - https://github.com/warungpintar/charts/releases/download/siera-kube-watch-1.0.2/siera-kube-watch-1.0.2.tgz
-    version: 1.0.2
+    - https://github.com/warungpintar/charts/releases/download/siera-kube-watch-1.0.3/siera-kube-watch-1.0.3.tgz
+    version: 1.0.3
 generated: "2020-05-31T18:09:17.346662+07:00"
