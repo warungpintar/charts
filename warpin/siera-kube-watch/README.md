@@ -29,7 +29,7 @@ $ helm install siera-kube-watch -n [your namespace]  warpincharts/siera-kube-wat
 install with telegram
 ```
 $ helm install siera-kube-watch -n [your namespace]  warpincharts/siera-kube-watch \
-  --set=config.telegram.enabled="true",config.telegram.token="123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11",config.telegram.chat.id="-1234567890123"
+  --set=config.telegram.enabled="true",config.telegram.token="123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11",config.telegram.chatID="-1234567890123"
 ```
 
 ## Parameters
@@ -48,7 +48,7 @@ The following table lists the configurable parameters of the siera kube watch ch
 | `config.slack.url`                       | url of slack                                                                                                                | `https://hooks.slack.com/services/TOKEN`                   |
 | `config.telegram.enabled`                | boolean to enable or disable slack                                                                                          | `false`                                                    |
 | `config.telegram.token`                  | url of telegram api                                                                                                         | `https://api.telegram.org/botTOKEN/sendMessage?chat_id=-XX`|                                                      
-| `config.telegram.chat.id`                | url of telegram api                                                                                                         | `https://api.telegram.org/botTOKEN/sendMessage?chat_id=-XX`|                                                      
+| `config.telegram.chatID`                | url of telegram api                                                                                                         | `https://api.telegram.org/botTOKEN/sendMessage?chat_id=-XX`|                                                      
 | `excluded.reasons`                       | In case you want to filter your event stream from specific reason, you can add that reason to excluded.reasons.             | `[]`                                                       |                                                      
 | `include.reasons`                        | In case you want to add normal reason to your event stream from specific reason.                                            | `["ScalingReplicaSet", "Started", "Killing"]`              |                                                      
 
