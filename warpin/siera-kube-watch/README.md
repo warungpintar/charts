@@ -48,9 +48,10 @@ The following table lists the configurable parameters of the siera kube watch ch
 | `config.slack.url`                       | url of slack                                                                                                                | `https://hooks.slack.com/services/TOKEN`                   |
 | `config.telegram.enabled`                | boolean to enable or disable slack                                                                                          | `false`                                                    |
 | `config.telegram.token`                  | url of telegram api                                                                                                         | `https://api.telegram.org/botTOKEN/sendMessage?chat_id=-XX`|                                                      
-| `config.telegram.chatID`                | url of telegram api                                                                                                         | `https://api.telegram.org/botTOKEN/sendMessage?chat_id=-XX`|                                                      
+| `config.telegram.chatID`                 | url of telegram api                                                                                                         | `https://api.telegram.org/botTOKEN/sendMessage?chat_id=-XX`|                                                      
 | `excluded.reasons`                       | In case you want to filter your event stream from specific reason, you can add that reason to excluded.reasons.             | `[]`                                                       |                                                      
 | `include.reasons`                        | In case you want to add normal reason to your event stream from specific reason.                                            | `["ScalingReplicaSet", "Started", "Killing"]`              |                                                      
+| `included.namespaces`                    | By default we include event from all namespaces, but you can filter namespace that you want to watch for.                   | ``                                                         |                                                      
 
 
 
