@@ -25,3 +25,4 @@ stringData:
 
     included.reasons: {{ .Values.config.included.reasons }}
 
+    #included.namespaces: []

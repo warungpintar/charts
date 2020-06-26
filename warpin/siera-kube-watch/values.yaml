@@ -4,7 +4,7 @@ metadata:
 image:
   repository: warungpintar/siera-kube-watch
   pullPolicy: Always
-  tag: v1.0.0
+  tag: v1.0.1
 
 config:
   webhook:
