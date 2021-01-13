@@ -22,7 +22,8 @@ config:
 
   workplace:
     enabled: false
-    threadKey: t_123456789
+    thread:
+      key: t_123456
     chatID: ABCDEF123456
 
   excluded:
