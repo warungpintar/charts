@@ -21,6 +21,11 @@ stringData:
       token: {{ .Values.config.telegram.token }}
       chatID: {{ .Values.config.telegram.chatID }}
 
+    workplace:
+      enabled: {{ .Values.config.workplace.enabled }}
+      thread.key: {{ .Values.config.workplace.threadKey }}
+      token: {{ .Values.config.workplace.token }}
+
     excluded.reasons: {{ .Values.config.excluded.reasons   }}
 
     included.reasons: {{ .Values.config.included.reasons }}

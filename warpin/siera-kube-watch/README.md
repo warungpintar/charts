@@ -49,11 +49,12 @@ The following table lists the configurable parameters of the siera kube watch ch
 | `config.telegram.enabled`                | boolean to enable or disable slack                                                                                          | `false`                                                    |
 | `config.telegram.token`                  | url of telegram api                                                                                                         | `https://api.telegram.org/botTOKEN/sendMessage?chat_id=-XX`|                                                      
 | `config.telegram.chatID`                 | url of telegram api                                                                                                         | `https://api.telegram.org/botTOKEN/sendMessage?chat_id=-XX`|                                                      
+| `config.workplace.enabled`               | boolean to enable or disable workplace                                                                                          | `false`                                                    |
+| `config.workplace.threadKey`             | unique identifier of an existing group chat thread                                                                                                       | `https://api.telegram.org/botTOKEN/sendMessage?chat_id=-XX`|                                                      
+| `config.workplace.token`                 | a generated access token when you create a new app for Workplace                                                                                                        | `https://api.telegram.org/botTOKEN/sendMessage?chat_id=-XX`|                                                      
 | `excluded.reasons`                       | In case you want to filter your event stream from specific reason, you can add that reason to excluded.reasons.             | `[]`                                                       |                                                      
 | `include.reasons`                        | In case you want to add normal reason to your event stream from specific reason.                                            | `["ScalingReplicaSet", "Started", "Killing"]`              |                                                      
 | `included.namespaces`                    | By default we include event from all namespaces, but you can filter namespace that you want to watch for.                   | ``                                                         |                                                      
-
-
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart. For example,
  
