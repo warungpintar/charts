@@ -20,6 +20,11 @@ config:
     token: http://slackurl
     chatID: -1234567890123
 
+  workplace:
+    enabled: false
+    thread:
+      key: t_123456
+    chatID: ABCDEF123456
 
   excluded:
     reasons: '[]'
