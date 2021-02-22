@@ -26,7 +26,7 @@ stringData:
       thread.key: {{ .Values.config.workplace.thread.key }}
       token: {{ .Values.config.workplace.token }}
 
-    excluded.reasons: {{ .Values.config.excluded.reasons   }}
+    excluded.reasons: {{ .Values.config.excluded.reasons }}
 
     included.reasons: {{ .Values.config.included.reasons }}
 
